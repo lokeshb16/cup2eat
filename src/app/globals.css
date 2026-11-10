@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #F8F5EC;
+    color: #1A1F1B;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #0C513B;
+    color: #F8F5EC;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F5EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0C513B;
+  border-radius: 5px;
+  border: 2px solid #F8F5EC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #073D2D;
+}
+
+/* Luxury Editorial Accents */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #D5AD58 0%, #F5DE98 50%, #B88E36 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.emerald-gradient {
+  background: linear-gradient(145deg, #073D2D 0%, #0C513B 60%, #084030 100%);
+}
+
+.cream-card {
+  background: #FAF7F0;
+  border: 1px solid rgba(213, 173, 88, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cream-card:hover {
+  border-color: rgba(213, 173, 88, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(7, 61, 45, 0.08);
+}
+
+.gold-border {
+  border: 1px solid rgba(213, 173, 88, 0.3);
+}
+
+/* Subtle texture overlay */
+.bg-subtle-pattern {
+  background-image: radial-gradient(rgba(12, 81, 59, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(213, 173, 88, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(213, 173, 88, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
